@@ -4,93 +4,280 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FocusWarden Privacy Policy</title>
+<meta name="description" content="Privacy policy for the FocusWarden Android app.">
 <style>
-  :root { color-scheme: light dark; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 32px 20px 80px;
-    line-height: 1.6;
-    color: #1a1a1a;
-    background: #fff;
+  :root {
+    color-scheme: light dark;
+    --navy-deep: #0b0a28;
+    --navy: #1d1a52;
+    --navy-soft: #312a7a;
+    --orange: #ff8a3d;
+    --orange-deep: #e8672b;
+    --bg: #f3f1f9;
+    --card: #ffffff;
+    --text: #201d3d;
+    --muted: #5c5880;
+    --border: #e4e1f0;
+    --table-stripe: #f7f5fc;
   }
   @media (prefers-color-scheme: dark) {
-    body { color: #e8e8e8; background: #121212; }
-    a { color: #8ab4f8; }
-    th, td { border-color: #333 !important; }
+    :root {
+      --bg: #0b0a1f;
+      --card: #15132e;
+      --text: #ece9fb;
+      --muted: #a7a2cf;
+      --border: #2a2652;
+      --table-stripe: #1b1940;
+    }
   }
-  h1 { font-size: 1.6em; margin-bottom: 0.2em; }
-  h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid currentColor; opacity: 0.95; padding-bottom: 4px; }
-  .effective { opacity: 0.7; font-size: 0.9em; margin-bottom: 2em; }
-  table { border-collapse: collapse; width: 100%; margin: 1em 0; }
-  th, td { border: 1px solid #ccc; padding: 8px 10px; text-align: left; font-size: 0.95em; }
-  th { background: rgba(127,127,127,0.1); }
-  code { background: rgba(127,127,127,0.15); padding: 2px 5px; border-radius: 4px; font-size: 0.92em; }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.65;
+    color: var(--text);
+    background: var(--bg);
+  }
+
+  .hero {
+    background: radial-gradient(circle at 18% 30%, var(--navy-soft), var(--navy) 55%, var(--navy-deep) 100%);
+    padding: 56px 20px 72px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .shield {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.6em, 4vw, 2.2em);
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+
+  .hero .sub {
+    color: #cfccee;
+    font-size: 1.02em;
+    margin: 0 0 18px;
+  }
+
+  .effective {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #f0eefc;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 0.85em;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: -40px auto 80px;
+    padding: 0 20px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 20px 50px -24px rgba(16, 12, 60, 0.35);
+    padding: 8px 32px 28px;
+  }
+
+  section {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-of-type { border-bottom: none; }
+
+  h2 {
+    font-size: 1.12em;
+    margin: 0 0 12px;
+    padding-left: 14px;
+    border-left: 4px solid var(--orange);
+    color: var(--text);
+  }
+
+  p { color: var(--text); margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+
+  ul { margin: 0; padding-left: 22px; }
+  li { margin-bottom: 10px; color: var(--text); }
+  li:last-child { margin-bottom: 0; }
+
+  a { color: var(--orange-deep); text-decoration: none; border-bottom: 1px solid currentColor; }
+  a:hover { color: var(--orange); }
+  @media (prefers-color-scheme: dark) {
+    a { color: var(--orange); }
+  }
+
+  strong { color: var(--text); }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 4px;
+    font-size: 0.93em;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  th, td { padding: 10px 12px; text-align: left; vertical-align: top; }
+  th {
+    background: var(--navy);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9em;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  td { border-top: 1px solid var(--border); color: var(--text); }
+
+  code {
+    background: rgba(255, 138, 61, 0.14);
+    color: var(--orange-deep);
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 0.92em;
+  }
+  @media (prefers-color-scheme: dark) {
+    code { color: var(--orange); }
+  }
+
+  .muted { color: var(--muted); font-size: 0.92em; }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85em;
+    margin-top: 28px;
+  }
+
+  @media (max-width: 480px) {
+    .card { padding: 4px 20px 24px; }
+    .hero { padding: 44px 16px 64px; }
+  }
 </style>
 </head>
 <body>
-<h1>FocusWarden Privacy Policy</h1>
-<p class="effective"><em>Effective date: October 6, 2026</em></p>
 
-<h2>Overview</h2>
-<p>FocusWarden ("the app") is a personal focus and app-blocking application for Android (package <code>com.focuswarden</code>), developed by Usama Waqas. This policy explains what information FocusWarden accesses on your device and how it is used. FocusWarden has no user account or login system — there is no central server collecting your data. Everything the app knows about you lives on your own device.</p>
+<div class="hero">
+  <svg class="shield" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <linearGradient id="shieldTop" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffb46a"/>
+        <stop offset="1" stop-color="#ff8a3d"/>
+      </linearGradient>
+      <linearGradient id="shieldBottom" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#f06a28"/>
+        <stop offset="1" stop-color="#d65816"/>
+      </linearGradient>
+    </defs>
+    <path d="M50 5 L82 20 C84 21 85 23 85 25 L85 48 C85 68 70 85 50 95 C30 85 15 68 15 48 L15 25 C15 23 16 21 18 20 Z" fill="url(#shieldTop)"/>
+    <path d="M15 48 C15 68 30 85 50 95 C70 85 85 68 85 48 L85 52 L15 52 Z" fill="url(#shieldBottom)"/>
+    <rect x="12" y="46" width="76" height="12" rx="6" fill="#f5f3ff"/>
+  </svg>
+  <h1>FocusWarden Privacy Policy</h1>
+  <p class="sub">What the app accesses on your device, and why.</p>
+  <span class="effective">Effective date: October 6, 2026</span>
+</div>
 
-<h2>Information We Collect</h2>
-<p>FocusWarden requests the following to provide its core features:</p>
-<ul>
-  <li><strong>Location</strong> (precise and approximate, including background location): used only to detect when you enter or leave a geofenced zone you set up (e.g. the gym, home) so a blocking profile can arm or disarm itself automatically.</li>
-  <li><strong>List of installed apps</strong>: used to show you the list of apps you can choose to block.</li>
-  <li><strong>App/window state</strong> (via Android's Accessibility Service): used only to detect when a blocked app is opened, so the block screen can appear. FocusWarden does not read the content of your screen or other apps.</li>
-  <li><strong>Notification metadata</strong> (optional, if you enable notification muting): processed entirely on your device to mute notifications from blocked apps during a focus session.</li>
-  <li><strong>Device Admin status</strong> (optional, if you enable uninstall-prevention): used only to detect that you've activated this feature; no additional data is collected.</li>
-  <li><strong>Purchase status</strong>: whether you've bought the optional "Remove Ads" upgrade, handled by Google Play Billing.</li>
-</ul>
+<div class="wrap">
+  <div class="card">
 
-<h2>How We Use This Information</h2>
-<p>All of the information above is processed and stored locally on your device. FocusWarden does not operate its own server, and none of it is transmitted to the developer. It is used solely to run the blocking, geofencing, and notification-muting features you configure yourself.</p>
+    <section>
+      <h2>Overview</h2>
+      <p>FocusWarden ("the app") is a personal focus and app-blocking application for Android (package <code>com.focuswarden</code>), developed by Usama Waqas. This policy explains what information FocusWarden accesses on your device and how it is used. FocusWarden has no user account or login system — there is no central server collecting your data. Everything the app knows about you lives on your own device.</p>
+    </section>
 
-<h2>Third-Party Services</h2>
-<p>FocusWarden uses the following third-party services:</p>
-<ul>
-  <li><strong>Google AdMob</strong>: shows ads inside the app and may collect device/advertising identifiers for that purpose. If you are in the EEA or UK, a consent form (Google's User Messaging Platform) is shown before any ad personalization. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
-  <li><strong>Google Play Billing</strong>: processes the optional "Remove Ads" in-app purchase. FocusWarden never sees your payment card details.</li>
-  <li><strong>Map tile providers</strong> (Esri "World Street Map" and OpenTopoMap): when you pick a location for a geofence on the in-app map, the map's visible coordinates are sent to these providers to retrieve the map images you see. No other personal data is sent.</li>
-</ul>
+    <section>
+      <h2>Information We Collect</h2>
+      <p>FocusWarden requests the following to provide its core features:</p>
+      <ul>
+        <li><strong>Location</strong> (precise and approximate, including background location): used only to detect when you enter or leave a geofenced zone you set up (e.g. the gym, home) so a blocking profile can arm or disarm itself automatically.</li>
+        <li><strong>List of installed apps</strong>: used to show you the list of apps you can choose to block.</li>
+        <li><strong>App/window state</strong> (via Android's Accessibility Service): used only to detect when a blocked app is opened, so the block screen can appear. FocusWarden does not read the content of your screen or other apps.</li>
+        <li><strong>Notification metadata</strong> (optional, if you enable notification muting): processed entirely on your device to mute notifications from blocked apps during a focus session.</li>
+        <li><strong>Device Admin status</strong> (optional, if you enable uninstall-prevention): used only to detect that you've activated this feature; no additional data is collected.</li>
+        <li><strong>Purchase status</strong>: whether you've bought the optional "Remove Ads" upgrade, handled by Google Play Billing.</li>
+      </ul>
+    </section>
 
-<h2>Data Storage &amp; Retention</h2>
-<p>All FocusWarden data — your blocking rules, geofences, settings, and purchase status — is stored locally on your device for as long as the app remains installed. There is no account or login, and the app includes no analytics or crash-reporting SDK. Because this data is never transmitted to or stored on a server, there is no server-side retention period, no international data transfer by the app itself, and nothing for the developer to delete on your behalf — uninstalling the app immediately and permanently deletes all of it from your device.</p>
+    <section>
+      <h2>How We Use This Information</h2>
+      <p>All of the information above is processed and stored locally on your device. FocusWarden does not operate its own server, and none of it is transmitted to the developer. It is used solely to run the blocking, geofencing, and notification-muting features you configure yourself.</p>
+    </section>
 
-<h2>Permissions Explained</h2>
-<table>
-  <tr><th>Permission</th><th>Why FocusWarden uses it</th></tr>
-  <tr><td>Background location</td><td>Lets geofencing work even while the app is closed</td></tr>
-  <tr><td>Fine / coarse location</td><td>Lets you place a geofence zone on the map</td></tr>
-  <tr><td>Accessibility Service</td><td>Detects when a blocked app opens, to show the block screen</td></tr>
-  <tr><td>Query all installed apps</td><td>Lets you pick which apps to block from a full list</td></tr>
-  <tr><td>Usage access</td><td>Powers usage-based blocking/tracking features</td></tr>
-  <tr><td>Device Admin</td><td>Optional, user-activated uninstall prevention</td></tr>
-  <tr><td>Notification access</td><td>Optional, mutes notifications from blocked apps</td></tr>
-  <tr><td>Display over other apps</td><td>Draws the block screen above a blocked app</td></tr>
-  <tr><td>Post notifications</td><td>Shows the ongoing "focus session active" notification</td></tr>
-</table>
+    <section>
+      <h2>Third-Party Services</h2>
+      <p>FocusWarden uses the following third-party services:</p>
+      <ul>
+        <li><strong>Google AdMob</strong>: shows ads inside the app and may collect device/advertising identifiers for that purpose. If you are in the EEA or UK, a consent form (Google's User Messaging Platform) is shown before any ad personalization. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+        <li><strong>Google Play Billing</strong>: processes the optional "Remove Ads" in-app purchase. FocusWarden never sees your payment card details.</li>
+        <li><strong>Map tile providers</strong> (Esri "World Street Map" and OpenTopoMap): when you pick a location for a geofence on the in-app map, the map's visible coordinates are sent to these providers to retrieve the map images you see. No other personal data is sent.</li>
+      </ul>
+    </section>
 
-<h2>Children's Privacy</h2>
-<p>FocusWarden is not directed at children under 13 and does not knowingly collect information from them. Ads shown through Google AdMob are configured at the strictest content rating the Google Mobile Ads SDK offers (rated "G").</p>
+    <section>
+      <h2>Data Storage &amp; Retention</h2>
+      <p>All FocusWarden data — your blocking rules, geofences, settings, and purchase status — is stored locally on your device for as long as the app remains installed. There is no account or login, and the app includes no analytics or crash-reporting SDK. Because this data is never transmitted to or stored on a server, there is no server-side retention period, no international data transfer by the app itself, and nothing for the developer to delete on your behalf — uninstalling the app immediately and permanently deletes all of it from your device.</p>
+    </section>
 
-<h2>Your Choices</h2>
-<ul>
-  <li>Any permission can be revoked at any time from Android Settings; the corresponding feature simply stops working rather than the app crashing.</li>
-  <li>Ad personalization consent can be reviewed or withdrawn anytime via <strong>Settings → Privacy options</strong> inside the app.</li>
-  <li>Uninstalling FocusWarden removes all locally stored data immediately — since nothing is stored on a server, this is also how you exercise any right to delete your data.</li>
-  <li>To request details about what a specific permission is used for, or any other question about your data, contact us using the email below.</li>
-</ul>
+    <section>
+      <h2>Permissions Explained</h2>
+      <table>
+        <thead>
+          <tr><th>Permission</th><th>Why FocusWarden uses it</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Background location</td><td>Lets geofencing work even while the app is closed</td></tr>
+          <tr><td>Fine / coarse location</td><td>Lets you place a geofence zone on the map</td></tr>
+          <tr><td>Accessibility Service</td><td>Detects when a blocked app opens, to show the block screen</td></tr>
+          <tr><td>Query all installed apps</td><td>Lets you pick which apps to block from a full list</td></tr>
+          <tr><td>Usage access</td><td>Powers usage-based blocking/tracking features</td></tr>
+          <tr><td>Device Admin</td><td>Optional, user-activated uninstall prevention</td></tr>
+          <tr><td>Notification access</td><td>Optional, mutes notifications from blocked apps</td></tr>
+          <tr><td>Display over other apps</td><td>Draws the block screen above a blocked app</td></tr>
+          <tr><td>Post notifications</td><td>Shows the ongoing "focus session active" notification</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-<h2>Changes to This Policy</h2>
-<p>If this policy changes, the effective date at the top of this page will be updated. Continuing to use FocusWarden after an update means you accept the revised policy.</p>
+    <section>
+      <h2>Children's Privacy</h2>
+      <p>FocusWarden is not directed at children under 13 and does not knowingly collect information from them. Ads shown through Google AdMob are configured at the strictest content rating the Google Mobile Ads SDK offers (rated "G").</p>
+    </section>
 
-<h2>Contact</h2>
-<p>Questions about this policy or your data can be sent to <strong>usamawaqasofficial@gmail.com</strong>.</p>
+    <section>
+      <h2>Your Choices</h2>
+      <ul>
+        <li>Any permission can be revoked at any time from Android Settings; the corresponding feature simply stops working rather than the app crashing.</li>
+        <li>Ad personalization consent can be reviewed or withdrawn anytime via <strong>Settings → Privacy options</strong> inside the app.</li>
+        <li>Uninstalling FocusWarden removes all locally stored data immediately — since nothing is stored on a server, this is also how you exercise any right to delete your data.</li>
+        <li>To request details about what a specific permission is used for, or any other question about your data, contact us using the email below.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>If this policy changes, the effective date at the top of this page will be updated. Continuing to use FocusWarden after an update means you accept the revised policy.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Questions about this policy or your data can be sent to <strong>usamawaqasofficial@gmail.com</strong>.</p>
+    </section>
+
+  </div>
+  <footer>&copy; 2026 FocusWarden &middot; com.focuswarden</footer>
+</div>
 
 </body>
 </html>
